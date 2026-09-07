@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bp1tkcucy23bn"]
+
+[ext_resource type="Script" uid="uid://d3vjre1mjmh31" path="res://Scripts/GenSkewExample.gd" id="1_6skg5"]
+[ext_resource type="Shader" uid="uid://claaf0gp5err8" path="res://Shaders/GenSkew.gdshader" id="1_j1uq5"]
+[ext_resource type="Texture2D" uid="uid://cbttnv4lnvtw3" path="res://Sprites/AngelIsland.png" id="2_6skg5"]
+[ext_resource type="Texture2D" uid="uid://d1lhd1dc4vpx1" path="res://Sprites/pollyShip.png" id="3_2kkk0"]
+[ext_resource type="Texture2D" uid="uid://b86a3uij71dap" path="res://Sprites/treasureMap.png" id="4_oyy3w"]
+[ext_resource type="Texture2D" uid="uid://cfgbl5sv0r6ny" path="res://Sprites/chesireCat.png" id="6_2kkk0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oc035"]
+shader = ExtResource("1_j1uq5")
+shader_parameter/skewOffX = 0.0
+shader_parameter/skewStripsX = 8
+shader_parameter/skewOffY = 0.0
+shader_parameter/skewOrigin = Vector2(128, 65)
+shader_parameter/waveOffX = 0.0
+shader_parameter/waveAmpX = 0.0
+shader_parameter/waveFreqX = 1.0
+shader_parameter/waveOffY = 0.0
+shader_parameter/waveAmpY = 0.0
+shader_parameter/waveFreqY = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_02wvc"]
+shader = ExtResource("1_j1uq5")
+shader_parameter/skewOffX = 0.0
+shader_parameter/skewStripsX = 1
+shader_parameter/skewOffY = 0.0
+shader_parameter/skewOrigin = Vector2(256, 106)
+shader_parameter/waveOffX = 0.0
+shader_parameter/waveAmpX = 0.0
+shader_parameter/waveFreqX = 1.0
+shader_parameter/waveOffY = 0.0
+shader_parameter/waveAmpY = 0.0
+shader_parameter/waveFreqY = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4xkj2"]
+shader = ExtResource("1_j1uq5")
+shader_parameter/skewOffX = 0.0
+shader_parameter/skewStripsX = 1
+shader_parameter/skewOffY = 0.0
+shader_parameter/skewOrigin = Vector2(0, 0)
+shader_parameter/waveOffX = 0.0
+shader_parameter/waveAmpX = 5.0
+shader_parameter/waveFreqX = 12.0
+shader_parameter/waveOffY = 0.0
+shader_parameter/waveAmpY = 2.0
+shader_parameter/waveFreqY = 10.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m11on"]
+shader = ExtResource("1_j1uq5")
+shader_parameter/skewOffX = 0.0
+shader_parameter/skewStripsX = 1
+shader_parameter/skewOffY = 0.0
+shader_parameter/skewOrigin = Vector2(160, 148)
+shader_parameter/waveOffX = 0.0
+shader_parameter/waveAmpX = 0.0
+shader_parameter/waveFreqX = 1.0
+shader_parameter/waveOffY = 0.0
+shader_parameter/waveAmpY = 0.0
+shader_parameter/waveFreqY = 6.375
+
+[node name="GenSkewExample" type="Node2D" unique_id=1359487695]
+script = ExtResource("1_6skg5")
+
+[node name="AngelIsland" type="Sprite2D" parent="." unique_id=74816841]
+material = SubResource("ShaderMaterial_oc035")
+position = Vector2(164, 119)
+texture = ExtResource("2_6skg5")
+
+[node name="PollyPirateShip" type="Sprite2D" parent="." unique_id=1804766431]
+material = SubResource("ShaderMaterial_02wvc")
+position = Vector2(480, 120)
+texture = ExtResource("3_2kkk0")
+
+[node name="TreasureMap" type="Sprite2D" parent="." unique_id=221097690]
+material = SubResource("ShaderMaterial_4xkj2")
+position = Vector2(800, 120)
+texture = ExtResource("4_oyy3w")
+
+[node name="ChesireCat" type="Sprite2D" parent="." unique_id=1630807153]
+material = SubResource("ShaderMaterial_m11on")
+position = Vector2(1120, 120)
+texture = ExtResource("6_2kkk0")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1714785244]
+anchor_mode = 0
+limit_left = 0
+limit_top = 0
