@@ -77,7 +77,7 @@ material = SubResource("ShaderMaterial_4xkj2")
 position = Vector2(800, 120)
 texture = ExtResource("4_oyy3w")
 
-[node name="ChesireCat" type="Sprite2D" parent="." unique_id=1630807153]
+[node name="CheshireCat" type="Sprite2D" parent="." unique_id=1630807153]
 material = SubResource("ShaderMaterial_m11on")
 position = Vector2(1120, 120)
 texture = ExtResource("6_2kkk0")

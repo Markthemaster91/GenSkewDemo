@@ -8,10 +8,10 @@ var islandSkew = Vector2.ZERO
 var skewTimer = 0.0
 var shipSkew = Vector2.ZERO
 
-var chesireSkew = Vector2.ZERO
-var chesireOff = Vector2.ZERO
-var chesireAmp:float = 0.0
-@onready var chesireOrigin = $ChesireCat.position
+var cheshireSkew = Vector2.ZERO
+var cheshireOff = Vector2.ZERO
+var cheshireAmp:float = 0.0
+@onready var cheshireOrigin = $CheshireCat.position
 
 
 
@@ -52,14 +52,14 @@ func _physics_process(delta: float) -> void:
 	$TreasureMap.material.set_shader_parameter("waveOffY", deg_to_rad(skewTimer * 8))
 	
 	#Chesire Cat
-	chesireSkew.x = -sin(deg_to_rad(skewTimer * 2)) * (40 / 320.0)
-	chesireSkew.y = sin(deg_to_rad(skewTimer * 2)) * (40 / 240.0)
-	$ChesireCat.material.set_shader_parameter("skewOffX", chesireSkew.x)
-	$ChesireCat.material.set_shader_parameter("skewOffY", chesireSkew.y)
+	cheshireSkew.x = -sin(deg_to_rad(skewTimer * 2)) * (40 / 320.0)
+	cheshireSkew.y = sin(deg_to_rad(skewTimer * 2)) * (40 / 240.0)
+	$CheshireCat.material.set_shader_parameter("skewOffX", cheshireSkew.x)
+	$CheshireCat.material.set_shader_parameter("skewOffY", cheshireSkew.y)
 	
-	chesireAmp = sin(deg_to_rad(skewTimer * 12)) * 4
-	$ChesireCat.material.set_shader_parameter("waveAmpY", chesireAmp)
-	$ChesireCat.position.x = chesireOrigin.x - (chesireAmp * chesireSkew.y)
-	$ChesireCat.position.y = chesireOrigin.y - chesireAmp
+	cheshireAmp = sin(deg_to_rad(skewTimer * 12)) * 4
+	$CheshireCat.material.set_shader_parameter("waveAmpY", cheshireAmp)
+	$CheshireCat.position.x = cheshireOrigin.x - (cheshireAmp * cheshireSkew.y)
+	$CheshireCat.position.y = cheshireOrigin.y - cheshireAmp
 	
 	pass
