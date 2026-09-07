@@ -8,4 +8,4 @@ A Demo project for the GenSkew Godot shader. MADE IN VERISON 4.7.1.
 - Treasure Map (McDonald's Teasure Land Adventure)
 - Chesire Cat (The Adventures of Batman & Robin)
 
-**You can find the shader by itself ([here.] (https://gist.github.com/Markthemaster91/c1192c95a281501f96948c4bdce20729))**
+**You can find the shader by itself [here.](https://gist.github.com/Markthemaster91/c1192c95a281501f96948c4bdce20729)**
